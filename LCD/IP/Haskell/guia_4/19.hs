@@ -1,0 +1,2 @@
+esSumaInicialDePrimos::Int->Bool
+esSumaInicialDePrimos 
