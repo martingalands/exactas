@@ -1,2 +1,0 @@
-esSumaInicialDePrimos::Int->Bool
-esSumaInicialDePrimos 
