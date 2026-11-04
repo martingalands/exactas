@@ -72,11 +72,13 @@ def ejercicio3(A: list[list[int]]) -> None:
     #la ultima columna vale minimoDeLista(A@pre fila i) para todo i en ese rango. o sea que le pongo el minimo valor de la fila
 
     for fila in range(len(A)):
-        A_fila_copia: list[int] = A[fila].copy()
-        contador :int = 0
-        for columna in range(len(A[fila])-1):
-            contador += 1
-        A[fila][contador] = minimo_de_lista(A_fila_copia)
+        #A_fila_copia: list[int] = A[fila].copy()
+        #contador :int = 0
+        #for columna in range(len(A[fila])-1):
+        #    contador += 1
+        #A[fila][contador] = minimo_de_lista(A_fila_copia)
+        A[fila].append(minimo_de_lista(A[fila]))
+
 
 
 # Ejercicio 4
