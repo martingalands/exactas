@@ -17,26 +17,18 @@ def intercambiar_e_invertir_columnas(A:list[list[int]],col1:int,col2:int):
 
 
 
-
 # la matriz queda igual excepto en las columnas que se intercambian
 # intercambio columnas e invierto la posicion de fila
-
-
-
-
-mat = [[1,2,3],
-       [40,50,60],
-       [-7,-8,-9]]
 
 
 # mat2 = [[1, -9, -8],
 #         [40, 60, 50],
 #         [-7, 3, 2]]
 
-mat3 = [[1,2,3,4],
-        [5,6,7,8],
-        [9,10,11,12],
-        [13,14,15,16]]
+# mat3 = [[1,2,3,4],
+#         [5,6,7,8],
+#         [9,10,11,12],
+#         [13,14,15,16]]
 
 def obtiene_columna(A:list[list[int]],col:int)->list[int]:
     res: list[int] = []
@@ -63,11 +55,11 @@ def invierte_columna(columna:list[int])->list[int]:
     return res
 
 
-print(id(mat))
+#print(id(mat))
 
-intercambiar_e_invertir_columnas(mat,1,2)
-print(mat)  #veo la variable mat (se tuvo que haber modificado)
+#intercambiar_e_invertir_columnas(mat,1,2)
+#print(mat)  #veo la variable mat (se tuvo que haber modificado)
 
-print(id(mat))
+#print(id(mat))
 
 #puedo chequear que la direccion en memoria es la misma

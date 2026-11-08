@@ -2,6 +2,7 @@ import unittest
 
 from ejercicio1 import *
 from ejercicio2 import *
+from ejercicio3 import *
 from ejercicio4 import *
 
 class Test(unittest.TestCase):
@@ -47,4 +48,15 @@ class Test(unittest.TestCase):
         self.assertEqual(mantuvieron_residencia({'Juan': 'Merlo', 'Ana': 'Merlo'}, {'Juan': 'Merlo', 'Ana': 'Merlo'}),{'Merlo':2})
         
 
-    #def test_ejercicio_tres(self):
+    def test_ejercicio_tres(self):
+        mat = [[1,2,3],
+       [40,50,60],
+       [-7,-8,-9]]
+
+        #verifico que la direccion en memoria sea la misma y testeo funcionamiento
+        id_mat = id(mat)
+        copia_mat = mat.copy()
+        intercambiar_e_invertir_columnas(mat,1,2)
+        self.assertNotEqual(copia_mat,[[1, -9, -8], [40, 60, 50], [-7, 3, 2]])
+        id_mat_luego= id(mat)
+        self.assertEqual(id_mat,id_mat_luego)
