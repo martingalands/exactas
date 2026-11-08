@@ -2,6 +2,7 @@ import unittest
 
 from ejercicio1 import *
 from ejercicio2 import *
+from ejercicio4 import *
 
 class Test(unittest.TestCase):
     def test_ejercicio_uno(self):
@@ -39,6 +40,11 @@ class Test(unittest.TestCase):
 
         self.assertNotEqual(pasar_por_autoservicio(cola_prueba), "Carlos")
 
+
+    def test_ejercicio_cuatro(self):
+        self.assertEqual(mantuvieron_residencia({'Juan': 'Merlo', 'Ana': 'Merlo'}, {'Juan': 'Castelar', 'Ana': 'Merlo'}),{'Merlo':1})
+        self.assertNotEqual(mantuvieron_residencia({'Juan': 'Merlo', 'Ana': 'Merlo'}, {'Juan': 'Castelar', 'Ana': 'Ituzaingo'}),{'Merlo':1})
+        self.assertEqual(mantuvieron_residencia({'Juan': 'Merlo', 'Ana': 'Merlo'}, {'Juan': 'Merlo', 'Ana': 'Merlo'}),{'Merlo':2})
         
 
     #def test_ejercicio_tres(self):
