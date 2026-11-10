@@ -53,3 +53,36 @@ print(subsecuencia_mas_larga([1,2,3,1,1,2,3,4,5,6]))
 
 
 #print(todos_consecutivos([2]))
+
+
+
+#con listas!!!!
+
+# def pos_secuencia_ordenada_mas_larga(s: list[int]) -> int:
+#     subsecuencias_posibles: list[list[int]] = []
+#     posiciones_subsecuencias_posibles: list[int] = [0]
+#     subsecuencia_actual = [s[0]]
+
+#     for i in range(len(s) - 1):
+#         elemento_actual: int = s[i]
+#         elemento_siguiente: int = s[i + 1]
+
+#         if elemento_siguiente >= elemento_actual:
+#             subsecuencia_actual.append(elemento_siguiente)
+#         else:
+#             posiciones_subsecuencias_posibles.append(i + 1)
+#             subsecuencias_posibles.append(subsecuencia_actual)
+
+#             # Reseteo la subsecuencia
+#             subsecuencia_actual = [elemento_siguiente]
+
+#     # Agrego la última subsecuencia
+#     subsecuencias_posibles.append(subsecuencia_actual)
+
+#     indice_subsec_mayor = 0
+
+#     for i in range(1, len(subsecuencias_posibles)):
+#         if len(subsecuencias_posibles[i]) > len(subsecuencias_posibles[indice_subsec_mayor]):
+#             indice_subsec_mayor = i
+
+#     return posiciones_subsecuencias_posibles[indice_subsec_mayor]
