@@ -118,38 +118,37 @@ def long_mayorASiete(s:list)->bool:
 #print(long_mayorASiete(["octagenario","octagenario","octagenario","octagenario"]))
 
 
-def es_palindroma(s:str)->bool:
-    if s == [] or len(s)==1:
-        return True
-    else:
-        res : bool = True
-        for i in range(len(s)):
-            if s[i]==s[-1-i]:
-                res = True and res
-            else:
-                return False
-        return True
+# def es_palindroma(s:str)->bool:
+#     if s == [] or len(s)==1:
+#         return True
+#     else:
+#         res : bool = True
+#         for i in range(len(s)):
+#             if s[i]==s[-1-i]:    <---- no permitido
+#                 res = True and res
+#             else:
+#                 return False
+#         return True
+
+
+def es_palindroma(s: str) -> bool:
+    i: int = 0
+    j: int = len(s) - 1
+
+    while i < j:
+        if s[i] != s[j]:    #<--- en cada paso muevo el borde derecho hacia el centro.
+            return False
+        i = i + 1
+        j = j - 1
+
+    return True
 
 # print(es_palindroma("neuquen"))
 # print(es_palindroma("menem"))
 # print(es_palindroma("dios"))
 # print(es_palindroma("anitalavalatina"))
 
-# mejor version, mas eficiente.
-# def es_palindroma(s: str) -> bool:
-#     i: int = 0
-#     j: int = len(s) - 1
 
-#     while i < j:
-#         if s[i] != s[j]:
-#             return False
-#         i = i + 1
-#         j = j - 1
-
-#     return True
-
-
-#print(es_palindroma("neuquen"))
 
 def iguales_consecutivos(s:list)->bool:
     i: int = 0
