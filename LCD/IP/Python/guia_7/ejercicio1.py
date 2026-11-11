@@ -130,6 +130,24 @@ def es_palindroma(s:str)->bool:
                 return False
         return True
 
+# print(es_palindroma("neuquen"))
+# print(es_palindroma("menem"))
+# print(es_palindroma("dios"))
+# print(es_palindroma("anitalavalatina"))
+
+# mejor version, mas eficiente.
+# def es_palindroma(s: str) -> bool:
+#     i: int = 0
+#     j: int = len(s) - 1
+
+#     while i < j:
+#         if s[i] != s[j]:
+#             return False
+#         i = i + 1
+#         j = j - 1
+
+#     return True
+
 
 #print(es_palindroma("neuquen"))
 
